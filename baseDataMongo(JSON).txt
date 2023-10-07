@@ -1,0 +1,118 @@
+[
+    {
+        "timestamp": "2023-09-25T12:00:00Z",
+        "username": "User1",
+        "password": "$2b$10$dVbZmi/ywv9TNqDFHpsuYOw9Z/32ovmVIxKXDPqaiN7mI5uVwc00u", 
+        "movies": [
+            {
+                "id": 1008042,
+                "genre_ids": [27, 53],
+                "backdrop_path": "/55Rb9qt3yzyF4KQpC1c3T3Fbcao.jpg",
+                "popularity": 2583.568,
+                "poster_path": "/yoZmZOIk35ZuH0WJoakB81ypHUH.jpg",
+                "title": "La Main"
+            },
+            {
+                "id": 346698,
+                "genre_ids": [35, 12, 14],
+                "backdrop_path": "/ctMserH8g2SeOAnCw5gFjdQF8mo.jpg",
+                "popularity": 2160.191,
+                "poster_path": "/2EXE5WolOOrIqCmWuL6eOQG8Qxy.jpg",
+                "title": "Barbie"
+            },
+            {
+                "id": 976573,
+                "genre_ids": [16, 35, 10751, 14, 10749],
+                "backdrop_path": "/4fLZUr1e65hKPPVw0R3PmKFKxj1.jpg",
+                "popularity": 1033.571,
+                "poster_path": "/rzY5kUJJ1zGfingV2oHyyxtlGNa.jpg",
+                "title": "Élémentaire"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-09-25T12:00:00Z",
+        "username": "User2",
+        "password": "$2b$10$dVbZmi/ywv9TNqDFHpsuYOw9Z/32ovmVIxKXDPqaiN7mI5uVwc00u",
+        "movies": [
+            {
+                "id": 385687,
+                "genre_ids": [28, 80, 53],
+                "backdrop_path": "/4XM8DUTQb3lhLemJC51Jx4a2EuA.jpg",
+                "popularity": 2135.993,
+                "poster_path": "/piYNJlLvSlXYnXh6ZoKzhPdrMfV.jpg",
+                "title": "Fast & Furious X"
+            },
+            {
+                "id": 615656,
+                "genre_ids": [28, 878, 27],
+                "backdrop_path": "/8pjWz2lt29KyVGoq1mXYu6Br7dE.jpg",
+                "popularity": 1936.265,
+                "poster_path": "/ijhxSWwgRwXRFVErL0hEkhxNffL.jpg",
+                "title": "En eaux très troubles"
+            },
+            {
+                "id": 976573,
+                "genre_ids": [16, 35, 10751, 14, 10749],
+                "backdrop_path": "/4fLZUr1e65hKPPVw0R3PmKFKxj1.jpg",
+                "popularity": 1033.571,
+                "poster_path": "/rzY5kUJJ1zGfingV2oHyyxtlGNa.jpg",
+                "title": "Élémentaire"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-09-25T12:00:00Z",
+        "username": "User3",
+        "password": "$2b$10$dVbZmi/ywv9TNqDFHpsuYOw9Z/32ovmVIxKXDPqaiN7mI5uVwc00u", 
+        "movies": [
+            {
+                "id": 1008042,
+                "genre_ids": [27, 53],
+                "backdrop_path": "/55Rb9qt3yzyF4KQpC1c3T3Fbcao.jpg",
+                "popularity": 2583.568,
+                "poster_path": "/yoZmZOIk35ZuH0WJoakB81ypHUH.jpg",
+                "title": "La Main"
+            },
+            {
+                "id": 346698,
+                "genre_ids": [35, 12, 14],
+                "backdrop_path": "/ctMserH8g2SeOAnCw5gFjdQF8mo.jpg",
+                "popularity": 2160.191,
+                "poster_path": "/2EXE5WolOOrIqCmWuL6eOQG8Qxy.jpg",
+                "title": "Barbie"
+            },
+            {
+                "id": 976573,
+                "genre_ids": [16, 35, 10751, 14, 10749],
+                "backdrop_path": "/4fLZUr1e65hKPPVw0R3PmKFKxj1.jpg",
+                "popularity": 1033.571,
+                "poster_path": "/rzY5kUJJ1zGfingV2oHyyxtlGNa.jpg",
+                "title": "Élémentaire"
+            }
+        ]
+    },
+    {
+        "timestamp": "2023-09-25T12:00:00Z",
+        "username": "User4",
+        "password": "$2b$10$dVbZmi/ywv9TNqDFHpsuYOw9Z/32ovmVIxKXDPqaiN7mI5uVwc00u",
+        "movies": [
+            {
+                "id": 569094,
+                "genre_ids": [16, 28, 12],
+                "backdrop_path": "/4HodYYKEIsGOdinkGi2Ucz6X9i0.jpg",
+                "popularity": 601.483,
+                "poster_path": "/hvfwCeSTgsExmz9l31dKkfR83DH.jpg",
+                "title": "Spider-Man : Across the Spider-Verse"
+            },
+            {
+                "id": 976573,
+                "genre_ids": [16, 35, 10751, 14, 10749],
+                "backdrop_path": "/4fLZUr1e65hKPPVw0R3PmKFKxj1.jpg",
+                "popularity": 1033.571,
+                "poster_path": "/rzY5kUJJ1zGfingV2oHyyxtlGNa.jpg",
+                "title": "Élémentaire"
+            }
+        ]
+    }
+]

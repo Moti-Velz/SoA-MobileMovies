@@ -1,0 +1,783 @@
+{
+	"info": {
+		"_postman_id": "2416f35a-60f7-4367-9f0a-e554130ab9a4",
+		"name": "ProjetMovie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27582357",
+		"_collection_link": "https://solar-shadow-59903.postman.co/workspace/MovieTMDB~2fc191ed-29c7-4269-848c-58e89089ca5b/collection/27582357-2416f35a-60f7-4367-9f0a-e554130ab9a4?action=share&source=collection_link&creator=27582357"
+	},
+	"item": [
+		{
+			"name": "1.AuthentificationService",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"User1\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3010/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3010",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"test2\",\r\n    \"password\": \"123\",\r\n    \"timestamp\" :\"2023-09-28T12:00:00Z\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3010/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3010",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "2.MovieService",
+			"item": [
+				{
+					"name": "users all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTY5NjAwNDM0MSwiaWF0IjoxNjk1OTE3OTQxfQ.v6n8yt1OHMwkwxkXPGDRm7jNbMWIzneD9Jc5BAguCeI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"movie\": {\r\n      \"id\": 99,\r\n      \"genreIds\": [1,2],\r\n      \"backdropPath\": \"blabla\",\r\n      \"popularity\": 8.1,\r\n      \"posterPath\": \"bloblo\",\r\n      \"title\": \"test title\"\r\n}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3005/api/v1/AllUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"api",
+								"v1",
+								"AllUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PopularMovie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3005/api/v1/movies/popular",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"popular"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "title-search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3005/api/v1/movies/title-search/avatar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"title-search",
+								"avatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "movie-details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3005/api/v1/movies/346698",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"346698"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "movies similar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3005/api/v1/movies/similar/346698",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"similar",
+								"346698"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "movies save",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"id\": 565770,\r\n        \"title\": \"Blue Beetle\",\r\n        \"genre_ids\": [\r\n            28,\r\n            878,\r\n            12\r\n        ],\r\n        \"backdrop_path\": \"/H6j5smdpRqP9a8UnhWp6zfl0SC.jpg\",\r\n        \"popularity\": 3868.894,\r\n        \"poster_path\": \"/xSVtl6ZF7fNuZIoXkZbzI2EzoAD.jpg\"\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:3005/api/v1/users/User1/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"User1",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "movies delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3005/api/v1/users/User1/movies/346698",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"User1",
+								"movies",
+								"346698"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"usernameTest223\",\r\n    \"password\": \"123tes2t\",\r\n    \"timestamp\" :\"2023-09-25T12:00:00Z\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3005/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IlVzZXIyIiwiaWF0IjoxNjk1OTQ3MjE3LCJleHAiOjE2OTU5NTA4MTd9.kEeQ2uOC_Qi35b_-NLKSIYXIiuv01iCZuYoNeilsR90",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IlVzZXIxIiwiaWF0IjoxNjk1OTI4MjI0LCJleHAiOjE2OTU5MzE4MjR9.JLX9b08Q9846bnhYmgZvJL5_qCAAvJORgfTNOB9zf8w",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"movie\": {\r\n      \"id\": 99,\r\n      \"genreIds\": [1,2],\r\n      \"backdropPath\": \"blabla\",\r\n      \"popularity\": 8.1,\r\n      \"posterPath\": \"bloblo\",\r\n      \"title\": \"test title\"\r\n }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3005/api/v1/users/User1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"User1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"movie\": {\r\n      \"id\": 99,\r\n      \"genreIds\": [1,2],\r\n      \"backdropPath\": \"blabla\",\r\n      \"popularity\": 8.1,\r\n      \"posterPath\": \"bloblo\",\r\n      \"title\": \"test title\"\r\n }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3005/api/v1/users/usernameTest4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3005",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"usernameTest4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "3.dao.api.movie.service",
+			"item": [
+				{
+					"name": "analysis",
+					"item": [
+						{
+							"name": "most-saved-movie",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3002/analysis/movies/most-saved",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"analysis",
+										"movies",
+										"most-saved"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "count-user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3002/analysis/users/total",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"analysis",
+										"users",
+										"total"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "count-total-movie-saved",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3002/analysis/movies/total-saved",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"analysis",
+										"movies",
+										"total-saved"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "postUser",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"test\",\r\n    \"password\": \"123\",\r\n    \r\n    \"timestamp\" :\"2023-09-25T12:00:00Z\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3002/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delUser",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"UserId\" : \"99\",\r\n  \"UserName\": \"toto\",\r\n  \"password\": \"123\", // Hashed password (make sure to hash it securely)\r\n  \"movies\": []\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3002/users/test2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"users",
+										"test2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUser",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3002/users/User1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"users",
+										"User1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllUser",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"UserId\" : \"99\",\r\n  \"UserName\": \"toto\",\r\n  \"password\": \"123\", // Hashed password (make sure to hash it securely)\r\n  \"movies\": []\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3002/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getMoviesByUser",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\" : \"99\",\r\n  \"username\": \"toto\",\r\n  \"password\": \"123\", // Hashed password (make sure to hash it securely)\r\n  \"movies\": []\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3002/users/User1/movies",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"users",
+										"User1",
+										"movies"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AddMovieToUser",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n                \"id\": 976573,\r\n                \"genreIds\": [16, 35, 10751, 14, 10749],\r\n                \"backdropPath\": \"/4fLZUr1e65hKPPVw0R3PmKFKxj1.jpg\",\r\n                \"popularity\": 1033.571,\r\n                \"posterPath\": \"/rzY5kUJJ1zGfingV2oHyyxtlGNa.jpg\",\r\n                \"title\": \"Élémentaire\"\r\n            \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3002/users/test/movies",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"users",
+										"test",
+										"movies"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RemoveMovieToUser",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"movie\": {\r\n      \"id\": 99,\r\n      \"genreIds\": [1,2],\r\n      \"backdropPath\": \"blabla\",\r\n      \"popularity\": 8.1,\r\n      \"posterPath\": \"bloblo\",\r\n      \"title\": \"test title\"\r\n}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3002/users/test/movies/976573",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"users",
+										"test",
+										"movies",
+										"976573"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RemoveALLMovieToUser",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"movie\": {\r\n      \"id\": 99,\r\n      \"genreIds\": [1,2],\r\n      \"backdropPath\": \"blabla\",\r\n      \"popularity\": 8.1,\r\n      \"posterPath\": \"bloblo\",\r\n      \"title\": \"test title\"\r\n}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3002/users/test/movies",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"users",
+										"test",
+										"movies"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "4.AnalyticService",
+			"item": [
+				{
+					"name": "most-saved-movie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/movies/most-saved",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"movies",
+								"most-saved"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "count-user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/users/total",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"total"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "count-total-movie-saved",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/movies/total-saved",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"movies",
+								"total-saved"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

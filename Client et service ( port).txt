@@ -1,0 +1,6 @@
+Client React - port 3000 -> Node Js
+Service Auth - port 3010 -> Node Js
+Service Movie - port 3005 -> Spring boot
+Service Dao - port 3002 -> Node Js
+Service Analytic - port 5000 - > flask
+Client admin - port 3001 -> Node JS
