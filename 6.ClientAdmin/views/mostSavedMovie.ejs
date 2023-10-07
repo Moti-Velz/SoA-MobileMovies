@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <body>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Titre du film</th>
+          <th>Nombre d'apparition</th>
+          <th>Image</th>
+          
+        </tr>
+        <% apiData.data.forEach((data) => { %>
+        <tr>
+          <td><%= data._id %></td>
+          <td><%= data.title %></td>
+          <td><%= data.total %></td>
+          <td><img src="<%=config.imageBaseUrl %><%= data.posterPath %>" alt=""></td>
+        
+        <% }) %>
+
+        
+      </table>
+
+      <form  action="/" method="get">
+        <button type="submit">Retour</button>
+    </form>
+    
+    </body>
+  </body>
+</html>

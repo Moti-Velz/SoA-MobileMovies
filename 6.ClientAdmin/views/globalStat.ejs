@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>Statistique globale</h1>
+<p> Il y a <span STYLE="font-weight:bold"><%=apiData.numberOfUsers %> </span> utilisateurs.</p>
+<p> Il y a <span STYLE="font-weight:bold"><%=apiData.numberOfMovies %></span> film de sauvegardé dans toutes les listes de favori.</p>
+<p> Il y a en moyenne <span STYLE="font-weight:bold"><%=apiData.globalAverageMovies %></span> film par liste.</p>
+
+<form  action="/" method="get">
+    <button type="submit">Retour</button>
+</form>
+    
+</body>
+</html>

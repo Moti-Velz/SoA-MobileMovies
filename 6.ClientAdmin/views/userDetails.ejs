@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    
+
+  </head>
+  <body>
+    <h1> Utilisateur</h1>
+    <table>
+      <tr>
+        
+        <th>Nom d'utilisateur</th>
+        <th>Mot de passe</th>
+        
+      </tr>
+      <tr>
+       
+        <td><%= apiData.user.username %></td>
+        <td><%= apiData.user.password %></td>
+    
+      </tr>
+    </table>
+
+    <h1>Liste de films favori</h1>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Titre</th>
+        <th>Popularité</th>
+        
+      </tr>
+      <% apiData.user.movies.forEach((movie) => { %>
+        <tr>
+            <td><%= movie.id %></td>
+            <td><%=movie.title %></td>
+            <td><%=movie.popularity %></td>
+            
+
+        </tr>
+                
+        <% }) %>
+    </table>
+
+    <form  action="/" method="get">
+      <button type="submit">Retour</button>
+  </form>
+  
+  </body>
+</html>

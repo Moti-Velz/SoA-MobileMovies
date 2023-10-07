@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+
+    <h1>Liste de films favori </h1>
+    
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Titre</th>
+        <th>Popularité</th>
+        <th>Image</th>
+        
+      </tr>
+      <% apiData.movieList.forEach((movie) => { %>
+        <tr>
+            <td><%=movie.id %></td>
+            <td><%=movie.title %></td>
+            <td><%=movie.popularity %></td>
+            <td><img src="<%=config.imageBaseUrl %><%= movie.poster_path %>" alt=""></td>
+            
+            
+
+        </tr>
+                
+        <% }) %>
+    </table>
+
+    <form  action="/" method="get">
+      <button type="submit">Retour</button>
+  </form>
+    
+</body>
+</html>
